@@ -1,8 +1,8 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    padding: 20px 100px 0px 100px;
-    background: #f3f3f3;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: bold !important;
+    padding: 0px 100px 0px 100px;
+    background-color: #96A8C8 !important;
 }
 
 button {
@@ -14,4 +14,65 @@ textarea {
     width: 100%;
     max-width: 500px;
     height: 100px;
+}
+
+#app-container {
+    text-align: center;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.col-md-9 {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #F3F3F3;
+    padding: 20px;
+    text-align: center;
+    padding-top: 38px;
+}
+
+.col-md-3 {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #F3F3F3;
+    padding: 0px !important;
+    align-content: center;
+}
+
+#btn-xkcd {
+    background-color: #495260;
+    color: white;
+    font-weight: bold;
+}
+
+#btn-xkcd:hover {
+    background-color: #758399;
+}
+
+#logo {
+    max-width: 285px;
+    max-height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#comments {
+    text-align: left;
+}
+
+@media screen and (min-width: 800px) {
+    #comments {
+        padding-left: 325px;
+    }
+}
+
+#comments-heading {
+    padding-top: 10px;
 }
