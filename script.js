@@ -1,3 +1,4 @@
+//create Vue app
 var app = new Vue({
     el: '#app',
     data: {
@@ -10,6 +11,7 @@ var app = new Vue({
       comments: {},
     },
     watch: {
+      //if value changes, update
         number: function (value, oldvalue) {
             if (oldvalue === '') {
                 this.max = value;
@@ -19,6 +21,7 @@ var app = new Vue({
         }
     },
     computed: {
+      //array for months
         month: function() {
           var month = new Array;
           if (this.current.month === undefined)
@@ -42,6 +45,7 @@ var app = new Vue({
       this.xkcd();
     },
     methods: {
+      //api fetch to grab comic
       xkcd: function() {
         this.loading = true;
         fetch('https://xkcd.now.sh/' + this.number).then(response => {
@@ -55,6 +59,7 @@ var app = new Vue({
             this.number = this.max;
         });
       },
+      //functions to fetch previous, next, first, last, and random comic
       previousComic: function() {
         this.number = this.current.num - 1;
       },
@@ -74,7 +79,7 @@ var app = new Vue({
       },
       randomComic: function() {
         this.number = this.getRandom(1, this.max);
-      },
+      },//function to add comments
       addComment: function() {
         if (!(this.number in this.comments))
       Vue.set(app.comments, this.number, new Array);
